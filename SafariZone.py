@@ -7,6 +7,7 @@ popular Pokemon video games.
 
 import tkinter as tk
 import random
+import sys
 
 __author__ = "Matt Saffert"
 __copyright__ = "Copyright 2020, Matt Saffert"
@@ -343,6 +344,7 @@ class SafariSimulator(tk.Frame):
 
         if self.safari_balls == 0:  # user ran out of balls. End the game
             self.endAdventure()
+            sys.exit()
 
         # calculates how likely the Pokemon is to flee
         if self.angryCount == 0 and self.eatingCount == 0:
